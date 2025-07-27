@@ -29,13 +29,6 @@ If you want to process your own data, some more steps are needed (the &#8594; in
 
 6. now the data preparation is finished and you should be able to run inference with the steps described in the next section "Running Inference". 
 
-## Running Inference
-We provide demo inputs under the `mpv3d_example` folder, where the target clothing and the reference person are like:
-
-![Demo inputs](/assets/demo_inputs.png)
-
-with inputs from the `mpv3d_example` folder, the easiest way to get start is to use the [pretrained models](https://figshare.com/s/fad809619d2f9ac666fc) and sequentially run the four steps below:
-
 ### 1. Testing MTM Module
 ```sh
 python test.py --model MTM --name MTM --dataroot mpv3d_example --datalist test_pairs --results_dir results
@@ -97,20 +90,4 @@ python train.py --model TFM --name TFM --dataroot path/to/MPV3D/data --warproot 
 ```
 
 (See options/base_options.py and options/train_options.py for more training options.)
-
-## License
-The use of this code and the MPV3D dataset is RESTRICTED to non-commercial research and educational purposes.
-
-## Citation
-If our code is helpful to your research, please cite:
-```
-@InProceedings{M3D-VTON,
-    author    = {Zhao, Fuwei and Xie, Zhenyu and Kampffmeyer, Michael and Dong, Haoye and Han, Songfang and Zheng, Tianxiang and Zhang, Tao and Liang, Xiaodan},
-    title     = {M3D-VTON: A Monocular-to-3D Virtual Try-On Network},
-    booktitle = {Proceedings of the IEEE/CVF International Conference on Computer Vision (ICCV)},
-    month     = {October},
-    year      = {2021},
-    pages     = {13239-13249}
-}
-```
 
